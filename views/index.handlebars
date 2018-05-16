@@ -22,6 +22,8 @@
             console.log('Name: ' + profile.getName());
             console.log('Image URL: ' + profile.getImageUrl());
             console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+
+            console.log(id_token);
         }
 
         // Signs out the user. Userinfo cached at this time so it auto signs in next time.
