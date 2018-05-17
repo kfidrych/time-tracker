@@ -1,21 +1,49 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="https://bulma.io">
-      <img src="http://images.all-free-download.com/images/graphiclarge/round_clock_icon_6813527.jpg" alt="Tick Tock (placeholder)" width="100" height="40">
+      <img 
+      {{!-- temporary image --}}
+      src="http://images.all-free-download.com/images/graphiclarge/round_clock_icon_6813527.jpg" alt="Tick Tock (placeholder)" width="100" height="40">
     </a>
   </div>
+  <div class="navbar-menu">
+      <div class="navbar-end">
+         <div class="navbar-item has-dropdown">
+             <a class="navbar-link">
+                 Click Meh!
+             </a>
+             <div class="navbar-dropdown">
+                 <a class="navbar-item">
+                     About Us
+                 </a>
+                 <a class="navbar-item">
+                     Calendar
+                 </a>
+                 <a class="navbar-item">
+                     Settings
+                 </a>
+                 <a class="navbar-item">
+                     Contact Us!
+                 </a>
+             </div>
+      </div>
+  </div>
 </nav>
-
+<br>
 <div class="container">
-    <h1>Page Title</h1>
-    <p>Could work! ¯\_(ツ)_/¯</p>
+    <img id="gitdone" src="http://dm.greenville.edu/wp-content/uploads/2017/11/Getting-Stuff-Done-Since-2004.png" alt="Getting Stuff Done">
+    <h1 id="header">Get up, get organized, get there on time!</h1>
+    <br>
+    <p>Get shit done!</p>
+
+    <br>
 
     {{#each users}}
-    <p>Demo username from database: {{username}}</p>
-    <p>Demo password from database: {{password}}</p>
+    {{!-- <p>Demo username from database: {{username}}</p>
+    <p>Demo password from database: {{password}}</p> --}}
     {{/each}} 
     {{!-- Creates the google sign in button and links to onSignIn function --}}
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <div class="g-signin2" data-onsuccess="onSignIn">Sign In</div>
     {{!-- Creats the sign out button and links to signOut function --}}
     <a href="#" onclick="signOut();">Sign out</a>
 
