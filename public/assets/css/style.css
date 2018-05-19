@@ -12,3 +12,7 @@ margin: 0 auto;
 .g-signin2 {
     text-align: center;
 }
+
+#timer {
+    font-size: 100px;
+}
