@@ -3,11 +3,11 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <link rel="stylesheet" href="../public/assets/css/style.css">
     <!-- jQuery here -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<!-- Link to js file -->
-<script type="text/javascript" src="../models/timer.js"></script>
-<script type="text/javascript" src="../models/about.js"></script>
+    <!-- Link to js file -->
+    <script type="text/javascript" src="../models/timer.js"></script>
+    <script type="text/javascript" src="../models/about.js"></script>
 </head>
 
 <body>
@@ -18,28 +18,32 @@
                     width="100" height="40">
             </a>
         </div>
-        <div class="navbar-menu">
-            <div class="navbar-end">
-                <div class="navbar-item has-dropdown">
-                    <a class="navbar-link">
-                        Click Meh!
+        <div class="dropdown">
+            <div class="dropdown-trigger">
+                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                    <span>Dix</span>
+                    <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                </button>
+            </div>
+            <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                <div class="dropdown-content">
+                    <a href="#" class="dropdown-item">
+                        Calendar
                     </a>
-                    <div class="navbar-dropdown">
-                        <a class="navbar-item">
-                            About Us
-                        </a>
-                        <a class="navbar-item">
-                            Calendar
-                        </a>
-                        <a class="navbar-item">
-                            Settings
-                        </a>
-                        <a class="navbar-item">
-                            Contact Us!
-                        </a>
-                    </div>
+                    <a class="dropdown-item">
+                        Settings
+                    </a>
+                    <a href="#" class="dropdown-item is-active">
+                        Contact Us!
+                    </a>
+                    <a href="../public/About.html" class="dropdown-item">
+                        About us
+                    </a>
                 </div>
             </div>
+        </div>
     </nav>
     <br>
     <div class="container">
@@ -56,6 +60,11 @@
         <a class="button is-danger" id="done">Done</a>
 
     </div>
+    <script>
+        var dropdown = document.querySelector('.dropdown');
+        dropdown.addEventListener('click', function (event) {
+            event.stopPropagation();
+            dropdown.classList.toggle('is-active');
+        });
+    </script>
 </body>
-
-
